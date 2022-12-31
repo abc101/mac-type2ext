@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# For white space in directories and files 
+# Set default seperator for white space in directories and files
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
 
@@ -23,3 +23,6 @@ while read -r line; do
         fi
     done 
 done < dir-list.txt
+
+# Reset default seperator
+IFS=$SAVEIFS
